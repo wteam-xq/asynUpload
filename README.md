@@ -8,7 +8,18 @@
 
 #### 本地部署（win8 64bit为例）：
 
-* 确保本地已安装 git 以及 node 环境，在某文件夹 运行`git clone https://github.com/wteam-xq/myMiniDemo/tree/master/asynUpload` 下载该项目
+* 确保本地已安装 git 以及 node 环境，打开某文件夹 右键 “Git Bash” 运行
+```Bash
+git clone https://github.com/wteam-xq/myMiniDemo/tree/master/asynUpload
+```
+
+* 下载前端上传控件“file-upload”，然后将以下文件:
+  * "jquery.fileupload.js"、
+  * “jquery.iframe-transport.js”、
+  * ‘jquery.ui.widget.js’、
+  * ‘jquery-1.8.2.min.js’
+放至“public/javascripts/lib”目录下。（或者从共享网盘获取以上文件：[依赖库、图片资源](http://pan.baidu.com/s/1kTKeL6Z) ） 
+
 * 运行cmd 进入“asynUpload”文件夹， 运行 `npm install`安装依赖模块
 * 进入 “asynUpload”文件夹启动项目: cmd运行 `node app.js` 
 * 在上述文件夹中创建“tmp”文件夹： 放置上传图片
