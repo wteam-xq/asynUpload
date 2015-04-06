@@ -18,7 +18,7 @@ git clone https://github.com/wteam-xq/myMiniDemo/tree/master/asynUpload
   * “jquery.iframe-transport.js”、
   * ‘jquery.ui.widget.js’、
   * ‘jquery-1.8.2.min.js’
-放至“public/javascripts/lib”目录下。（或者从共享网盘获取以上文件：[依赖库、图片资源](http://pan.baidu.com/s/1kTKeL6Z) ） 
+* 放至“public/javascripts/lib”目录下。（或者从共享网盘获取以上文件：[依赖库、图片资源](http://pan.baidu.com/s/1kTKeL6Z) ） 
 
 * 运行cmd 进入“asynUpload”文件夹， 运行 `npm install`安装依赖模块
 * 进入 “asynUpload”文件夹启动项目: cmd运行 `node app.js` 
