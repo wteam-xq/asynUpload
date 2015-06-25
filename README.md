@@ -3,7 +3,7 @@
 #### 使用技术： formidable(nodejs) 、 file-upload(jquery)
 
 #### 实现效果图：
-* ![demo截图](http://s1.postimg.org/pegzuko0r/image.jpg)
+* ![demo截图](https://github.com/wteam-xq/asynUpload/blob/master/screenShots.png)
 
 
 #### 本地部署（win8 64bit为例）：
@@ -22,7 +22,7 @@ git clone https://github.com/wteam-xq/myMiniDemo/tree/master/asynUpload
 * 打开浏览器（建议 chrome）输入： `localhost:3000`访问网站
 
 #### 说明： 
-* file-upload组件 是一款很方便使用的后台上传插件， 为什么说是后台？因为这货只适合后台网站上传，兼容性太差不足以作为前端插件；兼容不了IE9以下的浏览器;(前公司项目曾被坑)，看github官方最新版， 似乎修复了一些IE9以下浏览器的bug；
+* file-upload组件 是一款很方便使用的后台上传插件，为什么说是后台？因为其只适合后台网站上传，兼容性太差不足以作为前端插件；兼容不了IE9以下的浏览器;(前公司项目曾被坑)，看github官方最新版， 似乎修复了一些IE9以下浏览器的bug；
 
 #### 参考资料：
 * [formidable官网](https://www.npmjs.com/package/formidable)
