@@ -1,23 +1,24 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  h1.title #{title}Demo
+  
   div(class="form-wrapper")
-   span 同步上传
+   h3 同步上传
    form(name="upload",action="/upload",method="post",enctype="multipart/form-data")
     input(name="file",type="file",multiple="multiple")
-    input(naem="submit",type="submit",value="上传") 
+    input.btn.sync(naem="submit",type="submit",value="上传") 
 
   div.ajax-wrapper
-    span 异步上传
+    h3 异步上传
     input(id="fileupload",type="file",name="files[]",multiple="multiple")
+    input.btn.asyn(type='button' value='触发文件按钮' id="replace-btn")
+  
   div(id="progress" class="progress")
     div(class="progress-bar progress-bar-success")
   div(id="files" class="files")
 
-  .replace-btn
-    input(type='button' value='触发文件按钮' id="replace-btn")
+  
 
  script(type="text/javascript",src="/javascripts/lib/jquery-1.8.2.min.js")
  script(type="text/javascript",src="/javascripts/lib/jquery.fileupload.js")

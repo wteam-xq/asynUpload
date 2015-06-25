@@ -2,14 +2,12 @@
 /**
  * Module dependencies.
  */
-
 var express = require('express');
 var routes = require('./routes');
 var user = require('./routes/user');
 var upload = require('./routes/upload');
 var http = require('http');
 var path = require('path');
-
 var app = express();
 
 // all environments
@@ -23,13 +21,6 @@ app.use(express.urlencoded());
 app.use(express.methodOverride());
 app.use(app.router);
 app.use(express.static(path.join(__dirname, 'public')));
-//app.use(express.bodyParser({
-//        uploadDir: "tmp/",
-//        keepExtensions: true,
-//        limit: 10000000,
-//		 defer: true  //enable event       
-//}));
-
 
 // development only
 if ('development' == app.get('env')) {

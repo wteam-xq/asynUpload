@@ -9,6 +9,21 @@ exports.upload = function(req, res) {
 	var form = new formidable.IncomingForm(),files=[],fields=[],docs=[];
 	console.log('start upload');
 	
+	// 判断文件夹 tmp 是否存在， 不存在 创建之！
+	// fs.exists('tmp/', function(exists){
+	// 	if (!exists){
+	// 		fs.mkdir('tmp', function(isok){
+	// 			if (isok){
+	// 				// 创建文件成功
+	// 				console.log('创建文件成功'); 
+	// 			}else{
+	// 				// 创建文件失败
+	// 				console.log('创建文件失败');
+	// 			}
+	// 		});
+	// 	}
+	// });
+	
 	//存放目录
 	form.uploadDir = 'tmp/';
 
