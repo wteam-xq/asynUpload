@@ -2,10 +2,19 @@
 /*global window, $ */
 $(function() {
 
-    // 点击触发文件
-    $('#replace-btn').on('click', function(){
-        $('#fileupload').trigger('click');
-    }); 
+// 点击触发文件
+$('#replace-btn').on('click', function(){
+    $('#fileupload').trigger('click');
+}); 
+
+// 同步按钮点击触发
+$('#upload').on('click', function(){
+    // 判断是否选中文件
+    var _val = $('input.sync-file').val();
+    if (_val){
+      $('input.sync-bnt').trigger('click');
+    }
+});
     
 /*前端代码*/
  $('#fileupload').fileupload({
@@ -80,7 +89,7 @@ $(function() {
         });
     }).on('fileuploadfail', function (e, data) {
         $.each(data.files, function (index, file) {
-            var error = $('<span class="text-danger"/>').text('File upload failed.');
+            var error = $('<span class="text-danger"/>').text('上传文件失败了.');
             $(data.context.children()[index])
                 .append('<br>')
                 .append(error);

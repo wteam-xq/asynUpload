@@ -7,22 +7,12 @@ var formidable = require('formidable'),
 exports.upload = function(req, res) {
 	// parse a file upload
 	var form = new formidable.IncomingForm(),files=[],fields=[],docs=[];
-	console.log('start upload');
 	
-	// 判断文件夹 tmp 是否存在， 不存在 创建之！
-	// fs.exists('tmp/', function(exists){
-	// 	if (!exists){
-	// 		fs.mkdir('tmp', function(isok){
-	// 			if (isok){
-	// 				// 创建文件成功
-	// 				console.log('创建文件成功'); 
-	// 			}else{
-	// 				// 创建文件失败
-	// 				console.log('创建文件失败');
-	// 			}
-	// 		});
-	// 	}
-	// });
+	// 判断文件夹 tmp 是否存在， 不存在 创建之！(同步创建)
+	var exists = fs.existsSync('tmp/');
+	if (!exists){
+		fs.mkdirSync('tmp');
+	}
 	
 	//存放目录
 	form.uploadDir = 'tmp/';
@@ -33,7 +23,6 @@ exports.upload = function(req, res) {
 		fields.push([field, value]);
 	// 前端文件读取时事件
 	}).on('file', function(field, file) {
-		console.log(field, file);
 		files.push([field, file]);
 		docs.push(file);
 
@@ -60,8 +49,6 @@ exports.upload = function(req, res) {
 	// 文件解析事件
 	form.parse(req, function(err, fields, files) {
 		err && console.log('formidabel error : ' + err);
-
-		console.log('parsing done');
 	});
 
 };

@@ -6,8 +6,9 @@ block content
   div(class="form-wrapper")
    h3 同步上传
    form(name="upload",action="/upload",method="post",enctype="multipart/form-data")
-    input(name="file",type="file",multiple="multiple")
-    input.btn.sync(naem="submit",type="submit",value="上传") 
+    input.sync-file(name="file",type="file",multiple="multiple")
+    input.btn.sync.hidden.sync-bnt(naem="submit",type="submit",value="上传") 
+    input.btn.sync#upload(type="button",value="上传")
 
   div.ajax-wrapper
     h3 异步上传
